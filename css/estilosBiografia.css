@@ -1,0 +1,278 @@
+:root {
+    --color-tinta: #14181f;
+    --color-papel: #ffffff;
+    --color-verde: #0f6b47;
+    --color-verde-suave: #e9f2ee;
+    --color-ocre: #b5801f;
+    --color-gris: #5c6a75;
+    --color-borde: #e3e7ea;
+
+    --fuente-titulos: "Space Grotesk", "Segoe UI", sans-serif;
+    --fuente-texto: "Source Serif 4", Georgia, serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-tinta);
+    background-color: var(--color-papel);
+}
+
+h1,
+h2 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.portada {
+    background-color: var(--color-tinta);
+    color: var(--color-papel);
+    padding: 90px 24px 80px;
+}
+
+.portada-contenido {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.etiqueta {
+    display: inline-block;
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--color-verde-suave);
+    border: 1px solid var(--color-verde);
+    border-radius: 20px;
+    padding: 4px 14px;
+    margin-bottom: 20px;
+}
+
+.portada h1 {
+    font-size: 3.4rem;
+    margin-bottom: 12px;
+}
+
+.lema {
+    font-size: 1.25rem;
+    color: #b8c2cc;
+    margin-bottom: 26px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chips > span {
+    font-family: var(--fuente-titulos);
+    font-size: 0.85rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 5px 12px;
+}
+
+.chip + .chip {
+    margin-left: 10px;
+}
+
+.chips > span:nth-child(2) {
+    background-color: var(--color-verde);
+}
+
+
+nav {
+    background-color: var(--color-verde);
+    text-align: center;
+    padding: 14px 16px;
+}
+
+nav > a {
+    font-family: var(--fuente-titulos);
+    font-size: 0.95rem;
+    color: var(--color-papel);
+    text-decoration: none;
+    padding: 6px 14px;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+nav > a:first-child {
+    margin-left: 0;
+}
+
+nav > a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+nav > a:active {
+    background-color: rgba(0, 0, 0, 0.22);
+}
+
+.contenedor {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.bloque {
+    padding: 52px 0;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.bloque h2 {
+    font-size: 1.9rem;
+    color: var(--color-verde);
+    margin-bottom: 18px;
+}
+
+.bloque p {
+    margin-bottom: 18px;
+}
+
+.bloque h2 + p::first-letter {
+    font-family: var(--fuente-titulos);
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--color-ocre);
+    float: left;
+    line-height: 1;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+
+#historia h2 + p::first-line {
+    text-decoration: underline;
+    text-decoration-color: var(--color-ocre);
+    text-underline-offset: 5px;
+}
+
+.bloque em {
+    color: var(--color-verde);
+    font-style: italic;
+}
+
+.datos {
+    list-style: none;
+    margin-top: 26px;
+}
+
+.datos > li {
+    border-left: 3px solid var(--color-borde);
+    padding: 10px 0 10px 18px;
+}
+
+.datos > li:nth-child(odd) {
+    background-color: var(--color-verde-suave);
+}
+
+.datos > li:first-child {
+    border-left-color: var(--color-verde);
+}
+
+.datos strong {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+    color: var(--color-tinta);
+}
+
+.idolo {
+    margin-bottom: 22px;
+}
+
+.idolo img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 4px;
+    border: 1px solid var(--color-borde);
+}
+
+.idolo figcaption {
+    font-size: 0.85rem;
+    color: var(--color-gris);
+    margin-top: 8px;
+}
+
+.bloque a:link {
+    color: var(--color-verde);
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-verde-suave);
+}
+
+.bloque a:visited {
+    color: var(--color-ocre);
+    border-bottom-color: #f2e6cc;
+}
+
+.bloque a:hover {
+    border-bottom-color: currentColor;
+}
+
+.bloque a:active {
+    color: var(--color-tinta);
+}
+
+a[target="_blank"]::after {
+    content: " \2197";
+    font-size: 0.85em;
+}
+
+#pie {
+    background-color: var(--color-tinta);
+    color: #b8c2cc;
+    text-align: center;
+    padding: 34px 24px;
+}
+
+#pie p {
+    font-size: 0.9rem;
+}
+
+#pie p:first-child {
+    font-family: var(--fuente-titulos);
+    color: var(--color-papel);
+    margin-bottom: 4px;
+}
+
+
+@media (max-width: 620px) {
+
+    body {
+        font-size: 17px;
+    }
+
+    .portada {
+        padding: 60px 20px 52px;
+    }
+
+    .portada h1 {
+        font-size: 2.3rem;
+    }
+
+    nav > a {
+        display: inline-block;
+        padding: 6px 10px;
+    }
+
+    .chip + .chip {
+        margin-left: 8px;
+    }
+
+    .chips {
+        gap: 8px 0;
+    }
+}

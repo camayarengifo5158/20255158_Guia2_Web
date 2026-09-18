@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<!--
+  ANDA - Página de inicio
+  Reto IA - Guía 2 de Introducción al Desarrollo Web
+  Carlos Amaya 20255158
+
+  Rediseño conceptual con fines académicos. No es el sitio oficial de ANDA.
+  Sistema de diseño: estilo "Stripe" del catálogo de Refero, con el matiz
+  de marca remapeado al azul institucional de ANDA.
+  Esta es la página que incorpora las animaciones y transiciones.
+-->
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de inicio de ANDA: descargar la factura, pagar en línea, reportar una fuga y solicitar un nuevo servicio.">
+    <title>ANDA - Agua potable y saneamiento para El Salvador</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400&display=swap">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <a class="salto" href="#contenido">Ir al contenido principal</a>
+
+    <div class="barra-gobierno">
+        <div class="contenedor barra-gobierno__interior">
+            <span>Gobierno de El Salvador</span>
+            <nav aria-label="Enlaces institucionales">
+                <a href="https://instituciones.gob.sv/">Instituciones</a>
+                <a href="https://www.transparencia.gob.sv/institutions/anda">Portal de Transparencia</a>
+            </nav>
+        </div>
+    </div>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado__interior">
+
+            <a class="marca" href="index.html">
+                <img src="img/gota.svg" alt="" width="32" height="40">
+                <span class="marca__nombre">ANDA</span>
+            </a>
+
+            <nav class="menu" aria-label="Menú principal">
+                <a href="index.html" aria-current="page">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <a class="boton boton--relleno" href="servicios.html">Pagar factura</a>
+
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <!-- Portada. Los elementos entran escalonados con la animación
+             definida en la sección 11 de la hoja de estilo -->
+        <section class="portada">
+            <div class="contenedor portada__interior">
+                <span class="pildora animado retardo-1">Línea de atención 915</span>
+
+                <h1 class="animado retardo-2">Agua potable para todo El Salvador</h1>
+
+                <p class="portada__entrada animado retardo-3">
+                    Consulta tu factura, reporta una fuga o solicita un nuevo
+                    servicio en línea, sin visitar una oficina.
+                </p>
+
+                <div class="portada__acciones animado retardo-4">
+                    <a class="boton boton--relleno" href="servicios.html">Descargar mi factura</a>
+                    <a class="boton boton--contorno" href="contacto.html">Reportar una fuga</a>
+                </div>
+
+                <p class="portada__nota animado retardo-4">
+                    Atención telefónica todos los días del año.
+                </p>
+            </div>
+        </section>
+
+        <!-- Trámites más buscados -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Trámites más buscados</h2>
+                    <p>
+                        Los cuatro trámites que concentran la mayoría de las
+                        consultas, disponibles en línea.
+                    </p>
+                </div>
+
+                <div class="rejilla">
+
+                    <article class="tarjeta tarjeta--destacada animado">
+                        <div class="tarjeta__icono">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 3h10a1 1 0 0 1 1 1v17l-3-2-3 2-3-2-3 2V4a1 1 0 0 1 1-1Z"></path>
+                                <path d="M9 8h6M9 12h6"></path>
+                            </svg>
+                        </div>
+                        <h3><a href="servicios.html">Descargar factura</a></h3>
+                        <p>Consulta el monto y descarga tu comprobante con el número NPE.</p>
+                    </article>
+
+                    <article class="tarjeta animado">
+                        <div class="tarjeta__icono">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                                <path d="M2 10h20M6 15h4"></path>
+                            </svg>
+                        </div>
+                        <h3><a href="servicios.html">Pagar en línea</a></h3>
+                        <p>Paga con tarjeta desde el Portal Ciudadano, las 24 horas.</p>
+                    </article>
+
+                    <article class="tarjeta animado">
+                        <div class="tarjeta__icono">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 3s6 6.4 6 10.2A6 6 0 0 1 6 13.2C6 9.4 12 3 12 3Z"></path>
+                                <path d="M12 10v4M12 17h.01"></path>
+                            </svg>
+                        </div>
+                        <h3><a href="contacto.html">Reportar una fuga</a></h3>
+                        <p>Registra el reporte y da seguimiento con tu número de caso.</p>
+                    </article>
+
+                    <article class="tarjeta animado">
+                        <div class="tarjeta__icono">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 20V9.5L12 4l8 5.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"></path>
+                                <path d="M12 21v-6"></path>
+                            </svg>
+                        </div>
+                        <h3><a href="servicios.html">Solicitar nuevo servicio</a></h3>
+                        <p>Inicia la factibilidad y la instalación desde tu casa.</p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Aviso vigente -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Aviso de servicio</h2>
+                </div>
+
+                <aside class="aviso">
+                    <span class="pildora">Vigente</span>
+                    <p>
+                        Suspensión programada del servicio el
+                        <time datetime="2026-09-28">lunes 28 de septiembre</time>,
+                        de 8:00 a. m. a 4:00 p. m., en el sector norponiente de San
+                        Salvador por trabajos de mantenimiento en el Sistema Zona Norte.
+                    </p>
+                    <p style="margin-top:12px">
+                        <a class="vinculo" href="contacto.html">Consultar las zonas incluidas</a>
+                    </p>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- Noticias -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Noticias</h2>
+                    <p>Obras y proyectos en ejecución en todo el país.</p>
+                </div>
+
+                <div class="rejilla">
+
+                    <article class="noticia">
+                        <time class="noticia__fecha" datetime="2026-08-26">26 de agosto de 2026</time>
+                        <h3><a href="#">Modernización de la planta de bombeo Palmeras de París</a></h3>
+                        <p>
+                            La obra asegura agua potable constante para más de 7,500
+                            habitantes del distrito de Armenia, Sonsonate Este.
+                        </p>
+                    </article>
+
+                    <article class="noticia">
+                        <time class="noticia__fecha" datetime="2026-08-19">19 de agosto de 2026</time>
+                        <h3><a href="#">Trabajos preventivos en el Sistema Zona Norte</a></h3>
+                        <p>
+                            ANDA fortalece la infraestructura eléctrica del sistema que
+                            abastece al norponiente del área metropolitana.
+                        </p>
+                    </article>
+
+                    <article class="noticia">
+                        <time class="noticia__fecha" datetime="2026-07-29">29 de julio de 2026</time>
+                        <h3><a href="#">Nuevo laboratorio de micro y macromedición</a></h3>
+                        <p>
+                            El laboratorio mejora la precisión con la que se mide el
+                            consumo de agua potable en todo el país.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Cifras -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>La institución</h2>
+                    <p>
+                        ANDA provee agua potable y alcantarillado en El Salvador desde
+                        1961, como institución autónoma de servicio público.
+                    </p>
+                </div>
+
+                <div class="rejilla">
+
+                    <div class="cifra">
+                        <p class="cifra__numero">915</p>
+                        <p class="cifra__etiqueta">Línea de atención nacional</p>
+                    </div>
+
+                    <div class="cifra">
+                        <p class="cifra__numero">24 h</p>
+                        <p class="cifra__etiqueta">Trámites disponibles en línea</p>
+                    </div>
+
+                    <div class="cifra">
+                        <p class="cifra__numero">14</p>
+                        <p class="cifra__etiqueta">Departamentos atendidos</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor pie__interior">
+
+            <div>
+                <p class="pie__titulo">Trámites</p>
+                <ul>
+                    <li><a href="servicios.html">Descargar factura</a></li>
+                    <li><a href="servicios.html">Pagar en línea</a></li>
+                    <li><a href="contacto.html">Reportar una fuga</a></li>
+                    <li><a href="servicios.html">Nuevo servicio</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Institución</p>
+                <ul>
+                    <li><a href="servicios.html">Marco institucional</a></li>
+                    <li><a href="servicios.html">Estados financieros</a></li>
+                    <li><a href="https://www.transparencia.gob.sv/institutions/anda">Portal de Transparencia</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacto</p>
+                <ul>
+                    <li><a href="tel:915">Línea 915</a></li>
+                    <li>Colonia Libertad, Avenida Don Bosco</li>
+                    <li>San Salvador Centro, El Salvador</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="contenedor pie__legal">
+            <p>
+                Rediseño conceptual elaborado con fines académicos para la Guía 2 de
+                Introducción al Desarrollo Web. No es el sitio oficial de ANDA.
+                Carlos Amaya 20255158.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

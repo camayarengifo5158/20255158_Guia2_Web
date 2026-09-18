@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<!--
+  ANDA - Página de servicios
+  Reto IA - Guía 2 de Introducción al Desarrollo Web
+  Carlos Amaya 20255158
+
+  Rediseño conceptual con fines académicos. No es el sitio oficial de ANDA.
+  Los requisitos y plazos mostrados son contenido de ejemplo.
+-->
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios de ANDA en línea: facturación, pagos, nuevo servicio y reportes.">
+    <title>Servicios - ANDA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400&display=swap">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <a class="salto" href="#contenido">Ir al contenido principal</a>
+
+    <div class="barra-gobierno">
+        <div class="contenedor barra-gobierno__interior">
+            <span>Gobierno de El Salvador</span>
+            <nav aria-label="Enlaces institucionales">
+                <a href="https://instituciones.gob.sv/">Instituciones</a>
+                <a href="https://www.transparencia.gob.sv/institutions/anda">Portal de Transparencia</a>
+            </nav>
+        </div>
+    </div>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado__interior">
+
+            <a class="marca" href="index.html">
+                <img src="img/gota.svg" alt="" width="32" height="40">
+                <span class="marca__nombre">ANDA</span>
+            </a>
+
+            <nav class="menu" aria-label="Menú principal">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html" aria-current="page">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <a class="boton boton--relleno" href="#facturacion">Pagar factura</a>
+
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <section class="portada">
+            <div class="contenedor portada__interior">
+                <span class="pildora">Servicios</span>
+                <h1>Todo lo que puedes resolver en línea</h1>
+                <p class="portada__entrada">
+                    Facturación, pagos, nuevos servicios y reportes. Cada trámite
+                    indica qué necesitas y cuánto tarda.
+                </p>
+            </div>
+        </section>
+
+        <!-- Facturación y pagos -->
+        <section class="seccion" id="facturacion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Facturación y pagos</h2>
+                    <p>
+                        Para cualquiera de estos trámites necesitas el número NPE,
+                        impreso en la parte inferior de tu factura.
+                    </p>
+                </div>
+
+                <div class="rejilla">
+
+                    <article class="tarjeta tarjeta--destacada">
+                        <h3>Descargar factura</h3>
+                        <p>
+                            Consulta el monto del mes y descarga el comprobante en PDF
+                            desde el Portal Ciudadano.
+                        </p>
+                        <p style="margin-top:16px">
+                            <a class="vinculo" href="https://www.915.gob.sv/">Ir al Portal Ciudadano</a>
+                        </p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Pagar en línea</h3>
+                        <p>
+                            Pago con tarjeta de crédito o débito, disponible las 24
+                            horas. La aplicación del pago es inmediata.
+                        </p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Consultar mora</h3>
+                        <p>
+                            Revisa si tu cuenta tiene saldo pendiente de meses
+                            anteriores antes de solicitar cualquier otro trámite.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Nuevo servicio -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Solicitud de nuevo servicio</h2>
+                    <p>
+                        La instalación de una nueva conexión empieza con la solicitud
+                        de factibilidad técnica del inmueble.
+                    </p>
+                </div>
+
+                <ul class="detalles">
+                    <li>
+                        <span>Documento de identidad del solicitante</span>
+                        <span>Obligatorio</span>
+                    </li>
+                    <li>
+                        <span>Escritura o documento de propiedad del inmueble</span>
+                        <span>Obligatorio</span>
+                    </li>
+                    <li>
+                        <span>Croquis de ubicación</span>
+                        <span>Obligatorio</span>
+                    </li>
+                    <li>
+                        <span>Plazo estimado de resolución de factibilidad</span>
+                        <span>15 días hábiles</span>
+                    </li>
+                    <li>
+                        <span>Canal de solicitud</span>
+                        <span>En línea</span>
+                    </li>
+                </ul>
+
+                <p style="margin-top:32px">
+                    <a class="boton boton--relleno" href="contacto.html">Iniciar la solicitud</a>
+                    <a class="boton boton--contorno" href="contacto.html">Consultar requisitos</a>
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Reportes -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Reportes de servicio</h2>
+                    <p>
+                        Todo reporte genera un número de caso con el que puedes dar
+                        seguimiento por teléfono o en línea.
+                    </p>
+                </div>
+
+                <div class="rejilla">
+
+                    <article class="tarjeta">
+                        <h3>Fuga en la vía pública</h3>
+                        <p>Agua corriendo en calle, acera o zona verde.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Falta de agua</h3>
+                        <p>Ausencia de servicio sin aviso de suspensión programada.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Baja presión</h3>
+                        <p>El servicio llega, pero con caudal insuficiente.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Problema con el medidor</h3>
+                        <p>Medidor dañado, ilegible o con lectura inconsistente.</p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Preguntas frecuentes -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Preguntas frecuentes</h2>
+                </div>
+
+                <div style="max-width:80ch">
+
+                    <details class="pregunta">
+                        <summary>¿Dónde encuentro mi número NPE?</summary>
+                        <p>
+                            El NPE aparece impreso en la parte inferior de tu factura y
+                            es el dato que necesitas para consultar o pagar en línea.
+                        </p>
+                    </details>
+
+                    <details class="pregunta">
+                        <summary>¿Puedo pagar sin tener la factura impresa?</summary>
+                        <p>
+                            Sí. Con el NPE puedes descargar el comprobante desde el
+                            Portal Ciudadano y pagar en línea o en los puntos autorizados.
+                        </p>
+                    </details>
+
+                    <details class="pregunta">
+                        <summary>¿Qué hago si no llega el agua a mi colonia?</summary>
+                        <p>
+                            Revisa primero si hay un aviso de suspensión programada. Si
+                            no lo hay, presenta un reporte y anota el número de caso
+                            para dar seguimiento.
+                        </p>
+                    </details>
+
+                    <details class="pregunta">
+                        <summary>¿Cuánto tarda una solicitud de factibilidad?</summary>
+                        <p>
+                            El plazo estimado de resolución es de 15 días hábiles a
+                            partir de la recepción completa de los documentos.
+                        </p>
+                    </details>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor pie__interior">
+
+            <div>
+                <p class="pie__titulo">Trámites</p>
+                <ul>
+                    <li><a href="servicios.html">Descargar factura</a></li>
+                    <li><a href="servicios.html">Pagar en línea</a></li>
+                    <li><a href="contacto.html">Reportar una fuga</a></li>
+                    <li><a href="servicios.html">Nuevo servicio</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Institución</p>
+                <ul>
+                    <li><a href="servicios.html">Marco institucional</a></li>
+                    <li><a href="servicios.html">Estados financieros</a></li>
+                    <li><a href="https://www.transparencia.gob.sv/institutions/anda">Portal de Transparencia</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacto</p>
+                <ul>
+                    <li><a href="tel:915">Línea 915</a></li>
+                    <li>Colonia Libertad, Avenida Don Bosco</li>
+                    <li>San Salvador Centro, El Salvador</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="contenedor pie__legal">
+            <p>
+                Rediseño conceptual elaborado con fines académicos para la Guía 2 de
+                Introducción al Desarrollo Web. No es el sitio oficial de ANDA.
+                Carlos Amaya 20255158.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<!--
+  ANDA - Página de contacto
+  Reto IA - Guía 2 de Introducción al Desarrollo Web
+  Carlos Amaya 20255158
+
+  Rediseño conceptual con fines académicos. No es el sitio oficial de ANDA.
+  El formulario es una maqueta: no envía datos a ningún servidor.
+-->
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Canales de atención de ANDA y formulario para reportar una falla en el servicio.">
+    <title>Contacto - ANDA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400&display=swap">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <a class="salto" href="#contenido">Ir al contenido principal</a>
+
+    <div class="barra-gobierno">
+        <div class="contenedor barra-gobierno__interior">
+            <span>Gobierno de El Salvador</span>
+            <nav aria-label="Enlaces institucionales">
+                <a href="https://instituciones.gob.sv/">Instituciones</a>
+                <a href="https://www.transparencia.gob.sv/institutions/anda">Portal de Transparencia</a>
+            </nav>
+        </div>
+    </div>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado__interior">
+
+            <a class="marca" href="index.html">
+                <img src="img/gota.svg" alt="" width="32" height="40">
+                <span class="marca__nombre">ANDA</span>
+            </a>
+
+            <nav class="menu" aria-label="Menú principal">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html" aria-current="page">Contacto</a>
+            </nav>
+
+            <a class="boton boton--relleno" href="servicios.html">Pagar factura</a>
+
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <section class="portada">
+            <div class="contenedor portada__interior">
+                <span class="pildora">Atención al usuario</span>
+                <h1>Reporta una falla o consúltanos</h1>
+                <p class="portada__entrada">
+                    Todo reporte genera un número de caso. Guárdalo: con él puedes
+                    dar seguimiento por teléfono o en línea.
+                </p>
+            </div>
+        </section>
+
+        <!-- Canales de atención -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Canales de atención</h2>
+                </div>
+
+                <div class="rejilla">
+
+                    <article class="tarjeta tarjeta--destacada">
+                        <h3>Por teléfono</h3>
+                        <p class="cifra__numero" style="font-size:40px">915</p>
+                        <p>Reportes y consultas, todos los días del año.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>En oficina</h3>
+                        <p>
+                            Edificio Administrativo ANDA<br>
+                            Colonia Libertad, Avenida Don Bosco<br>
+                            San Salvador Centro, El Salvador
+                        </p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>En línea</h3>
+                        <p>
+                            Facturación, pagos y solicitudes de servicio desde el
+                            Portal Ciudadano.
+                        </p>
+                        <p style="margin-top:16px">
+                            <a class="vinculo" href="https://www.915.gob.sv/">Abrir el Portal Ciudadano</a>
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Formulario de reporte -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Formulario de reporte</h2>
+                    <p>
+                        Completa los datos y recibirás el número de caso en el correo
+                        que indiques.
+                    </p>
+                </div>
+
+                <form class="formulario" action="#" method="post">
+
+                    <div class="campo campo--doble">
+                        <div>
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+
+                        <div>
+                            <label for="npe">Número NPE</label>
+                            <input type="text" id="npe" name="npe" inputmode="numeric">
+                            <p class="campo__ayuda">Aparece en la parte inferior de tu factura.</p>
+                        </div>
+                    </div>
+
+                    <div class="campo campo--doble">
+                        <div>
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+
+                        <div>
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="tipo">Tipo de reporte</label>
+                        <select id="tipo" name="tipo">
+                            <option>Fuga en la vía pública</option>
+                            <option>Falta de agua</option>
+                            <option>Baja presión</option>
+                            <option>Problema con el medidor</option>
+                            <option>Consulta sobre facturación</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="direccion">Dirección del incidente</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                        <p class="campo__ayuda">Incluye colonia, calle y punto de referencia.</p>
+                    </div>
+
+                    <div class="campo">
+                        <label for="detalle">Descripción</label>
+                        <textarea id="detalle" name="detalle"></textarea>
+                        <p class="campo__ayuda">Indica desde cuándo ocurre y si afecta a más viviendas.</p>
+                    </div>
+
+                    <p>
+                        <button class="boton boton--relleno" type="submit">Enviar reporte</button>
+                        <button class="boton boton--contorno" type="reset">Limpiar formulario</button>
+                    </p>
+
+                </form>
+
+            </div>
+        </section>
+
+        <!-- Horarios -->
+        <section class="seccion">
+            <div class="contenedor">
+
+                <div class="seccion__intro">
+                    <h2>Horarios de atención</h2>
+                </div>
+
+                <ul class="detalles" style="max-width:80ch">
+                    <li>
+                        <span>Línea telefónica 915</span>
+                        <span>24 horas, todos los días</span>
+                    </li>
+                    <li>
+                        <span>Oficinas administrativas</span>
+                        <span>Lunes a viernes, 8:00 a. m. a 4:00 p. m.</span>
+                    </li>
+                    <li>
+                        <span>Portal Ciudadano en línea</span>
+                        <span>24 horas, todos los días</span>
+                    </li>
+                    <li>
+                        <span>Atención de emergencias</span>
+                        <span>24 horas, todos los días</span>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor pie__interior">
+
+            <div>
+                <p class="pie__titulo">Trámites</p>
+                <ul>
+                    <li><a href="servicios.html">Descargar factura</a></li>
+                    <li><a href="servicios.html">Pagar en línea</a></li>
+                    <li><a href="contacto.html">Reportar una fuga</a></li>
+                    <li><a href="servicios.html">Nuevo servicio</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Institución</p>
+                <ul>
+                    <li><a href="servicios.html">Marco institucional</a></li>
+                    <li><a href="servicios.html">Estados financieros</a></li>
+                    <li><a href="https://www.transparencia.gob.sv/institutions/anda">Portal de Transparencia</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="pie__titulo">Contacto</p>
+                <ul>
+                    <li><a href="tel:915">Línea 915</a></li>
+                    <li>Colonia Libertad, Avenida Don Bosco</li>
+                    <li>San Salvador Centro, El Salvador</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="contenedor pie__legal">
+            <p>
+                Rediseño conceptual elaborado con fines académicos para la Guía 2 de
+                Introducción al Desarrollo Web. No es el sitio oficial de ANDA.
+                Carlos Amaya 20255158.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

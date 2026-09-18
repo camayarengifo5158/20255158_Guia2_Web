@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía 2 - Desarrollo Web</title>
+    <link rel="stylesheet" href="css/estilosIndex.css">
+</head>
+
+<body>
+
+    <header id="encabezado">
+        <h1>Guía 2 - Desarrollo Web</h1>
+        <p>Selectores CSS avanzados, pseudo-elementos y pseudo-clases</p>
+    </header>
+
+    <main>
+
+        <h2>Ejercicios de la guía</h2>
+
+        <p>
+            En esta página se encuentran los ejemplos y ejercicios realizados
+            durante la segunda guía de Desarrollo Web.
+        </p>
+
+        <ul>
+            <li>
+                <a href="pelicula.html">Ejercicio 1 - Selectores CSS avanzados (Altamar)</a>
+            </li>
+
+            <li>
+                <a href="tablero.html">Ejercicio 2 - Tablero de damas con :nth-child()</a>
+            </li>
+
+            <li>
+                <a href="biografia.html">Ejercicio complementario - Biografía</a>
+            </li>
+        </ul>
+
+        <!-- ================= RETO IA ================= -->
+        <section id="reto-ia">
+
+            <h2>Reto IA</h2>
+
+            <p>
+                Ampliación del sitio de
+                <a href="https://www.anda.gob.sv/" target="_blank" rel="noopener">ANDA</a>,
+                trabajado en la Guía 1, a un sitio de tres páginas. El trabajo de
+                la herramienta de inteligencia artificial se orientó con un sistema
+                de diseño estructurado obtenido de
+                <a href="https://styles.refero.design/" target="_blank" rel="noopener">Refero Styles</a>.
+            </p>
+
+            <p>
+                El estilo seleccionado fue <strong>Stripe</strong>, por su carácter
+                contenido: sin sombras, un solo color de acento y jerarquía
+                construida por escala y espacio en blanco. Se conservó el sistema
+                completo y se sustituyó únicamente el matiz de marca por el azul
+                institucional de ANDA, respetando el rol de cada color.
+            </p>
+
+            <p>
+                La página de inicio incorpora las animaciones y transiciones: los
+                elementos de la portada y las tarjetas de trámites entran de forma
+                escalonada, con la duración y la curva definidas como variables CSS.
+            </p>
+
+            <h3>Las tres páginas</h3>
+
+            <div class="reto-tarjetas">
+
+                <article class="reto-tarjeta">
+                    <h4>Página de inicio</h4>
+                    <p>
+                        Retrabajada a partir del resultado de la Guía 1 y orientada
+                        por el sistema de diseño. Es la página que contiene las
+                        animaciones.
+                    </p>
+                    <p>
+                        <a class="reto-enlace" href="reto-ia/index.html">Ver la página de inicio</a>
+                    </p>
+                </article>
+
+                <article class="reto-tarjeta">
+                    <h4>Servicios</h4>
+                    <p>
+                        Facturación y pagos, solicitud de nuevo servicio con sus
+                        requisitos y plazos, tipos de reporte y preguntas
+                        frecuentes desplegables.
+                    </p>
+                    <p>
+                        <a class="reto-enlace" href="reto-ia/servicios.html">Ver servicios</a>
+                    </p>
+                </article>
+
+                <article class="reto-tarjeta">
+                    <h4>Contacto</h4>
+                    <p>
+                        Canales de atención, formulario de reporte de fallas y
+                        tabla de horarios de atención.
+                    </p>
+                    <p>
+                        <a class="reto-enlace" href="reto-ia/contacto.html">Ver contacto</a>
+                    </p>
+                </article>
+
+            </div>
+
+            <h3>Instrucción utilizada</h3>
+
+            <p>
+                Se redactó una instrucción única que cubre las tres páginas, con el
+                contenido del design.md incorporado dentro de ella, de modo que la
+                herramienta mantuviera la misma identidad visual en todo el sitio.
+            </p>
+
+            <details class="prompt">
+                <summary>Ver la instrucción completa (clic para desplegar)</summary>
+<pre class="prompt__texto">Actúa como diseñador y desarrollador web front-end. Vas a construir un sitio
+de tres páginas para una institución pública salvadoreña, aplicando de forma
+estricta un sistema de diseño que te voy a entregar. Lee todo el contexto
+antes de escribir una sola línea de código.
+
+SITIO
+Administración Nacional de Acueductos y Alcantarillados (ANDA), El Salvador.
+URL de referencia: https://www.anda.gob.sv/
+Es la institución pública que provee agua potable y alcantarillado en el país.
+
+ANTECEDENTE
+En un trabajo anterior rediseñé la página de inicio de este sitio partiendo
+de un diagnóstico con tres problemas:
+1. La página no prioriza los trámites que la gente busca: un carrusel
+   decorativo ocupa el lugar principal.
+2. La navegación es demasiado profunda, está duplicada y tiene enlaces que
+   no navegan.
+3. No se distingue el contenido vigente del archivado: conviven avisos de
+   2023 con noticias de 2026 con el mismo peso visual.
+Las tres páginas que vas a construir deben resolver estos problemas.
+
+SISTEMA DE DISEÑO (obligatorio, aplicar al pie de la letra)
+Tomado del catálogo de Refero Styles (https://styles.refero.design/), estilo
+"Stripe". Conserva el sistema completo y sustituye únicamente el matiz de
+marca por el azul institucional de ANDA, respetando el rol de cada color.
+
+COLORES — acentos de marca
+- Acción principal: #0a4c7a   (botones principales, vínculos activos, iconos)
+- Vínculos y etiquetas: #1176a8
+- Borde de botón fantasma: #a8c9dd
+- Divisores suaves: #cfe0ea
+- Fondo de tarjeta destacada: #e6f1f7
+- Bordes enfatizados y hover del botón: #06283c
+
+COLORES — neutros
+- Tinta #061b31        títulos y texto principal
+- Acero #50617a        texto terciario y de apoyo
+- Pizarra #64748d      etiquetas y leyendas
+- Humo #839bc8         texto atenuado
+- Escarcha #e5edf5     bordes y divisores primarios
+- Bruma #f8fafd        fondo de separación de secciones
+- Blanco #ffffff       lienzo de página y superficies
+
+TIPOGRAFÍA
+Familia Inter Tight desde Google Fonts, pesos 300 y 400.
+Activa font-feature-settings: 'tnum' on para que las cifras alineen.
+Escala: Display 56px/300/1.03/-1.4px · Título 32px/300/1.1/-0.64px ·
+Subtítulo 22px/300/1.1/-0.22px · Cuerpo grande 20px/300/1.4/-0.2px ·
+Cuerpo 16px/400/1.2/-0.16px · Cuerpo pequeño 14px/300/1.4/-0.14px ·
+Leyenda 12px/300/1.45/-0.12px.
+El interletrado se cierra conforme crece el tamaño.
+
+ESPACIADO Y FORMA
+Unidad base 8px. Ancho máximo 1320px. Separación entre secciones 96px.
+Relleno de tarjeta 32px. Separación entre elementos 8px. Densidad cómoda.
+Radio de borde 4px en botones, tarjetas y campos; 9999px solo en etiquetas
+tipo píldora.
+
+ELEVACIÓN
+Este sistema no usa sombras. La profundidad se construye con una progresión
+de tintes de fondo (#ffffff → #f8fafd → #e5edf5 → #e6f1f7 → #0a4c7a),
+divisores de 1px en #e5edf5 y espacio en blanco generoso.
+
+REGLAS OBLIGATORIAS
+- Reserva #0a4c7a para acciones principales, vínculos activos e iconos.
+- Usa peso 300 en títulos y cuerpo de texto.
+- Acompaña cada botón relleno con un botón fantasma secundario.
+- Separa secciones con reglas de 1px y 96px de espacio.
+
+REGLAS PROHIBIDAS
+- Sin sombras, desenfoques ni efectos de elevación.
+- Sin colores de acento adicionales fuera del monocromo y el azul.
+- Nunca pesos 600 ni 700.
+- Sin radios mayores a 4px, salvo las píldoras.
+- Sin grandes áreas rellenas con el color de acción.
+- Nunca centres el cuerpo de texto ni los títulos.
+- No uses #64748d ni #50617a para párrafos completos, solo para etiquetas.
+
+LAS TRES PÁGINAS
+
+1. index.html — Página de inicio
+   Barra institucional, encabezado con logotipo y menú de un solo nivel,
+   portada con mensaje claro y dos acciones, bloque de cuatro trámites
+   principales, aviso de servicio vigente y fechado, tres noticias con fecha
+   visible, bloque de cifras institucionales y pie.
+
+2. servicios.html — Servicios
+   Portada breve, bloque de facturación y pagos, bloque de solicitud de nuevo
+   servicio con lista de requisitos y plazos, bloque de tipos de reporte y
+   preguntas frecuentes desplegables con &lt;details&gt; y &lt;summary&gt;.
+
+3. contacto.html — Contacto
+   Portada breve, tres canales de atención, formulario de reporte con nombre,
+   NPE, correo, teléfono, tipo de reporte, dirección y descripción, y una
+   tabla de horarios de atención.
+
+Las tres páginas comparten el mismo encabezado, el mismo pie y la misma hoja
+de estilo, y la navegación entre ellas debe funcionar. Marca la página actual
+con el atributo aria-current="page".
+
+CONTENIDO REAL (no inventes datos)
+- Trámites: descargar factura con NPE, pagar en línea en el Portal Ciudadano
+  (915.gob.sv), reportar fuga o falta de agua, solicitar nuevo servicio.
+- Línea de atención: 915.
+- Dirección: Colonia Libertad, Avenida Don Bosco, Edificio Administrativo
+  ANDA, San Salvador Centro, El Salvador.
+- Noticias reales:
+  * 26/08/2026 — Modernización de la planta de bombeo Palmeras de París, que
+    beneficia a más de 7,500 habitantes del distrito de Armenia, Sonsonate Este.
+  * 19/08/2026 — Trabajos preventivos en la infraestructura eléctrica del
+    Sistema Zona Norte.
+  * 29/07/2026 — Laboratorio de micro y macromedición del agua potable.
+- Enlaces institucionales: instituciones.gob.sv y el Portal de Transparencia.
+- Si un texto no está en esta lista, escribe contenido de ejemplo y márcalo
+  como tal en un comentario. No inventes cifras, correos ni teléfonos.
+
+ANIMACIONES Y TRANSICIONES (obligatorio en la página de inicio)
+- Los elementos de la portada deben entrar con un desplazamiento de 24px
+  hacia arriba y un desvanecimiento, escalonados con retardos crecientes, de
+  modo que la portada se arme en secuencia en lugar de aparecer de golpe.
+- Las cuatro tarjetas de trámites deben entrar una tras otra.
+- Los botones, vínculos, tarjetas y campos de formulario deben cambiar de
+  color de forma gradual al pasar el cursor.
+- Define la duración y la curva de la animación de entrada como variables CSS
+  en :root, llamadas --duracion-entrada y --easing-entrada, porque tengo que
+  modificarlas en vivo durante una demostración grabada.
+- Respeta la preferencia prefers-reduced-motion.
+
+RESTRICCIONES TÉCNICAS (es una tarea de universidad)
+- Solo HTML5 y CSS3. Sin frameworks y sin JavaScript.
+- Una sola hoja de estilo externa compartida por las tres páginas, vinculada
+  con &lt;link rel="stylesheet"&gt;. Sin estilos embebidos.
+- Usa clases e id de forma clara y consistente.
+- Diseño responsivo para teléfono, tableta y escritorio.
+- Accesible: contraste suficiente, textos alternativos, foco visible con
+  teclado y enlace de salto al contenido.
+- Sin imágenes externas: usa iconos SVG en línea y un archivo SVG para el
+  logotipo.
+- Comenta el CSS en español explicando cada bloque, porque tengo que explicar
+  el código en un video.
+
+QUÉ QUIERO QUE ENTREGUES
+1. index.html, servicios.html y contacto.html completos.
+2. css/estilos.css completo y comentado.
+3. El archivo SVG del logotipo.
+4. Una lista final de las técnicas de CSS que usaste más allá de lo básico,
+   con una frase que explique qué función cumple cada una.</pre>
+            </details>
+
+            <h3>Video explicativo</h3>
+
+            <p>
+                Selección del estilo en Refero, construcción de la instrucción,
+                recorrido por las tres páginas y demostración en vivo de la
+                modificación de los parámetros de la animación.
+            </p>
+
+            <!-- CAMBIAR ID_DEL_VIDEO por el identificador del video de YouTube -->
+            <div class="video-contenedor">
+                <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO"
+                    title="Reto IA - Guía 2 de Introducción al Desarrollo Web"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="pie">
+        <p>Guía 2 - Introducción al Desarrollo Web Carlos Amaya 20255158</p>
+    </footer>
+
+</body>
+
+</html>
